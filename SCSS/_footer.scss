@@ -1,0 +1,112 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: $color-footer;
+    padding: 50px 43px 70px;
+}
+
+.container-footer {
+    width: 100%;
+    max-width: 1300px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 10px 12px;
+    height: auto;
+    @include flex_Disposition (row,center,center);
+    flex-shrink: 0;
+}
+
+.first-bloc {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 25px;
+    @include flex_Disposition (column,space-between,flex-start);
+
+    & .logo {
+        padding: 8px 10px;
+        background:$white;
+    }
+
+    & .list-icons {
+        list-style: none;
+        @include flex_Disposition (row,center,center);
+    }
+
+    & .item-icon {
+        margin: 0 5px;
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.second-bloc {
+    width: 250px;
+    height: 100px;
+    margin-bottom: 20px;
+    @include flex_Disposition (row,space-between,center);
+
+    & .first-list, & .second-list {
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: $white;
+            text-align: center;
+            transition: color 0.2s ease-in;
+        }
+
+        a:hover {
+            color: $green_hero;
+        }
+    }
+
+    & .first-list .item-first, & .second-list .item-second {
+        line-height: 1.8;
+    }
+}
+
+.txt-footer {
+    width: 300px;
+    height: 70px;
+    @include flex_Disposition (column,flex-end,center);
+    margin-left: auto;
+    color: $white;
+    line-height: 1.5;
+    opacity: 0.6;
+    font-family: Roboto,sans-serif;
+}
+
+@media screen and (max-width:900px) {
+
+    footer {
+        padding: 5px;
+    }
+   
+    .first-bloc {
+        @include flex_Disposition (column,space-between,center);
+    }
+
+    .second-bloc {
+        @include flex_Disposition (row wrap,center,center);
+
+        & .first-list {
+            margin-right:20px;
+        }
+    }
+
+    .txt-footer {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .container-footer {
+        @include flex_Disposition (column,center,center);
+    }
+
+    .txt-footer {
+        margin: 0 auto;
+    }
+}

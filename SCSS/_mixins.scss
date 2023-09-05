@@ -1,0 +1,6 @@
+@mixin flex_Disposition ($flex-flow:row wrap,$justifyContent,$align-items) {
+    display: flex;
+    flex-flow: $flex-flow;
+    justify-content: $justifyContent;
+    align-items: $align-items;
+}
